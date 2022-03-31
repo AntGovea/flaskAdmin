@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="title">
+  Ejemplo de Autenticación con Flask
+</h1>
+<h2 class="subtitle">
+  Autenticación y Autorización fácil con Flask.
+</h2>
+<br>
+<p>
+Bienvenido {{ current_user.email }}!<br />
+Si tú estás viendo esta página debes estar autenticado.<br />
+<br />
+Si eres administrador pulsa <h3><a href="admin">aquí</a></h3> para administrar Usuarios y Roles.<br />
+<br />
+Si quieres salir pulsa <h3><a href="/logout">aquí</a></h3> ó en el botón superior derecho<br />
+</p>
+{% endblock %}

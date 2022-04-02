@@ -14,6 +14,7 @@ auth = Blueprint('auth', __name__, url_prefix='/security')
 def login():
     return render_template('/security/login.html')
 
+
 #POST
 @auth.route('/login',methods=['POST'])
 def login_post():

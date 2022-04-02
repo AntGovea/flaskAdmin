@@ -28,7 +28,7 @@ def create_app():
     #Definimos la ruta a la BD:
     app.config['SQLALCHEMY_DATABASE_URI']='mysql://root:root@localhost/ProyectoIntegrador'
     app.config['SECURITY_PASSWORD_SALT'] = 'thisissecretsalt'
-    
+        
     db.init_app(app)
     @app.before_first_request
     def create_all():
@@ -141,7 +141,7 @@ def create_app():
         def is_accessible(self):
             return current_user.has_role('admin')
         
-    admin = Admin(app)
+    admin = Admin(app, name='microblog', template_mode='bootstrap3')
 
     # Add Flask-Admin views for Users and Roles
     admin.add_view(UserAdmin(User, db.session))
